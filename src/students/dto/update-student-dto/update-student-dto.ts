@@ -1,10 +1,4 @@
-import { IsArray, IsNumber, IsString } from 'class-validator';
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateStudentDto } from '../create-student-dto/create-student-dto';
 
-export class UpdateStudentDto {
-  @IsString()
-  readonly name: string;
-  @IsNumber()
-  readonly age: number;
-  @IsArray()
-  readonly address: [];
-}
+export class UpdateStudentDto extends PartialType(CreateStudentDto) {}

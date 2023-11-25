@@ -5,6 +5,8 @@ export class CreateStudentDto {
   readonly name: string;
   @IsNumber()
   readonly age: number;
-  @IsArray()
+  @IsArray({ each: true })
   readonly address: [];
+  @IsArray({ each: true })
+  readonly courses: [];
 }
