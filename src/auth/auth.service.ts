@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { faker } from '@faker-js/faker';
 import { IAuthenticate, Role } from './interface/Role';
 import { AuthenticateDto } from './dto/authenticate.dto';
-import * as bcrypt from 'bcrypt';
+// import * as bcrypt from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 
 @Injectable()
