@@ -19,7 +19,7 @@ export class Student {
   age: number;
 
   @Column('json', { nullable: true })
-  address: [];
+  address: string[];
 
   @JoinTable()
   @ManyToMany(() => Course, (course) => course.students, {

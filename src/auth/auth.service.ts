@@ -2,7 +2,6 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { faker } from '@faker-js/faker';
 import { IAuthenticate, Role } from './interface/Role';
 import { AuthenticateDto } from './dto/authenticate.dto';
-// import * as bcrypt from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 
 @Injectable()
@@ -44,7 +43,7 @@ export class AuthService {
 
     if (!user) throw new NotFoundException('Invalid credentials');
 
-    const token = sign({ ...user }, 'secret');
+    const token = sign({ ...user }, process.env.JWT_SECRET);
 
     return {
       user,

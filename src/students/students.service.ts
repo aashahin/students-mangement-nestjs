@@ -2,8 +2,8 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Student } from './entities/student.entity';
 import { Repository } from 'typeorm';
-import { CreateStudentDto } from './dto/create-student-dto/create-student-dto';
-import { UpdateStudentDto } from './dto/update-student-dto/update-student-dto';
+import { CreateStudentDto } from './dto/create-student.dto';
+import { UpdateStudentDto } from './dto/update-student.dto';
 import { Course } from './entities/course.entity';
 
 @Injectable()
@@ -66,7 +66,7 @@ export class StudentsService {
 
     if (!updatedStudent) {
       throw new NotFoundException(
-        `This Student ${id} is not found in us databases`,
+        `Thi  s Student ${id} is not found in us databases`,
       );
     } else {
       return this.studentRepository.save(updatedStudent);
