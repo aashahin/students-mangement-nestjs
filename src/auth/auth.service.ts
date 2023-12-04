@@ -15,20 +15,8 @@ export class AuthService {
     },
     {
       id: faker.string.uuid(),
-      username: faker.string.alpha({ length: 10 }),
-      password: faker.string.numeric({ length: 8 }),
-      role: Role.Admin,
-    },
-    {
-      id: faker.string.uuid(),
-      username: faker.string.alpha({ length: 10 }),
-      password: faker.string.numeric({ length: 8 }),
-      role: Role.User,
-    },
-    {
-      id: faker.string.uuid(),
-      username: faker.string.alpha({ length: 10 }),
-      password: faker.string.numeric({ length: 8 }),
+      username: 'user',
+      password: '123456',
       role: Role.User,
     },
   ];
